@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='ko-KR'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name'viewpoint' content='width=divice-width, initial-scale=1.0'>
+		<title> practice 9_3 </title>
+<style>
+ul{
+	list-style-type:none;
+}
+caption, li{
+	float:left;
+}
+</style>
+	</head>
+	<body>
+		<form action='https://localhost/test/9_3.php' method='post' autocomplete='off'>
+			Name : <input type='text' name='name'><br>
+			Age : <input type='text' name='age'><br>
+			E-Mail : <input type='text' name='email'>
+			<ul style='list-style-type:none;'>
+				<caption> Gender :  </caption>
+				<li>
+					<input type='radio' name='gender' value='Female'>
+					Femail
+				</li>
+				<li>
+					<input type='radio' name='gender' value='Male'>
+					Male
+				</li>
+				<li>
+					<input type='radio' name='gender' value='Nothing'>
+					Nothing
+				</li>
+			</ul>
+			<label for='comment'> Comment :  </label><br>
+			<textarea name='comment' row='5' col='40'></textarea><br>
+			<input type='submit'>
+		</form>
+	</body>
+</html>
