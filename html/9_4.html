@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> hello title </title>
+		<meta charset='utf-8'>
+<style>
+.err {color:red;}
+</style>
+	</head>
+	<body>
+		<form method='post' action='https://localhost/test/9_4.php'>
+			Name : <input type='text' name='name'>
+			<span class='err'>*<?php echo $nameErr; ?></span>
+			<br><br>
+			Age : <input type='text' name='age'>
+			<span class'err'>*<?php echo $ageErr; ?></span>
+			<br><br>
+			Gender : <input type='radio' name='gender' value='femail'> Femail
+			<input type='radio' name='gender' value='Mail'> Mail
+			<input type='radio' name='gender' value='some where between'> Some Where Between<br><br>
+			E-mail : <input type='text' name='email'>
+			<span class='err'>*<?php echo $emailErr; ?></span><br><br>
+			<input type='submit'>
+			<br><br>
+		</form>
+	</body>
+</html>

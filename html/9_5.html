@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<style>
+.err {color:red;}
+</style>
+	</head>
+	<body>
+		<?php
+$nameErr = '';
+$name=''
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+	if(empty($_POST['name'])){
+		$nameErr="Name's required";
+	}else{
+		$name=($_POST['name']);
+		if (!preg_match("/^[a-zA-Z-' ]*$/",$name)){
+			$nameErr='only letters and white space allowed';
+		}
+	}
+}
+		?>
+
+		<form method='post' action='>?php echo htmlspecialchars($_SEVER["PHP_SELF"]);?>'>
+			Name : <input type='text' name='name'>
+			<span class='err'> <?php echo $nameErr;?> </span>
+			<br><br>
+			<input type='submit'>
+		</form>
+	</body>
+</html>

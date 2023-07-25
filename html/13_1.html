@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<?php
+$cookie_name = 'user';
+$cookie_value = 'juwan wnaju';
+setcookie ($cookie_name, $cookie_value, time() + (86400 * 10), '/');
+?>
+
+<html>
+	<body>
+		<?php
+		if(!isset($_COOKIE[$cookie_name])){
+			echo 'cookie named ' . cookie . ' is not set;';
+		} else {
+			echo 'cookie : ' . $cookie_name . 'is set!<br>';
+			echo 'value  : ' . $_COOKIE[$cookie_name];
+		}
+		?>
+	</body>
+</html>
